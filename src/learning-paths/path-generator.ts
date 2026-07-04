@@ -48,7 +48,7 @@ export class LearningPathGenerator {
       throw new CasuyaAIError(`Path not found: ${pathId}`, ErrorCode.VALIDATION_ERROR);
     }
 
-    let progress = await this.getProgress(pathId, studentId) ?? {
+    const progress = await this.getProgress(pathId, studentId) ?? {
       pathId,
       studentId,
       completedNodes: [],
